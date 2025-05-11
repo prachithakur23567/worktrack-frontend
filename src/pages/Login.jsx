@@ -13,7 +13,7 @@ const Login = () => {
         // const {user} = useContext(userContext)
         e.preventDefault()
         try{
-const response = await axios.post("http://localhost:5000/api/auth/login",{email,password})
+const response = await axios.post("https://worktrack-backend.vercel.app/api/auth/login",{email,password})
 console.log(response,"response");
 if(response.data.success){
     login(response.data.user)
